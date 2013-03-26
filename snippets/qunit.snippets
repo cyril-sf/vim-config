@@ -1,0 +1,18 @@
+# vim:set ft=snippet nolist:
+
+# QUnit test
+snippet te
+	test("${1}", function() {
+		${2}
+	});
+# Jasmine description
+snippet mod
+	QUnit.module("${1}"${2});
+snippet ex
+	expect(${1});
+snippet e
+	equal(${1}, ${2}, "${3}");
+snippet de
+	deepEqual(${1}, ${2}, "${3}");
+snippet o
+	ok(${1}, "${2}");
