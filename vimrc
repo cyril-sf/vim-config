@@ -17,9 +17,7 @@
 " Pathogen (This must happen first.)
 " --------
 
-filetype off                    " Avoid a Vim/Pathogen bug
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
