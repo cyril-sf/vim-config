@@ -21,6 +21,7 @@ execute pathogen#infect()
 
 set nocompatible                " Don't maintain compatibility with vi
 syntax on                       " Highlight known syntaxes
+filetype on
 filetype plugin indent on
 
 
@@ -33,3 +34,11 @@ runtime! init/**.vim
 " Machine-local vim settings - keep this at the end
 " --------------------------
 silent! source ~/.vimrc.local
+
+" Avoid infinite loops when the pwd is $HOME
+if !(getcwd() == $HOME)
+  if filereadable(".vimrc")
+    source .vimrc
+  endif
+  set runtimepath+=./.vim
+endif
