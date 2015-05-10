@@ -117,3 +117,6 @@
 [submodule "bundle/tmux-config"]
 	path = bundle/tmux-config
 	url = git@github.com:pivotal/tmux-config.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
